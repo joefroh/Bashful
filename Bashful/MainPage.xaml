@@ -42,7 +42,7 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Bashful" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="Random Quote" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Random" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
@@ -51,9 +51,9 @@
                 <ProgressBar x:Name="LoadingBar"  IsIndeterminate="True" IsEnabled="True"/>
             </Grid>
 
-            <TextBlock x:Name="QuoteNumberBlock" Margin="10,0,10,0" Text="{Binding Number}"/>
+            <TextBlock x:Name="QuoteNumberBlock" Text="{Binding Number}" Margin="10,0,0,0"/>
             <ScrollViewer>
-                <TextBlock x:Name="QuoteText" TextWrapping="Wrap" Text="{Binding CurrentQuote}" Height="384"/>
+                <TextBlock x:Name="QuoteText" TextWrapping="Wrap" Text="{Binding CurrentQuote}" Height="384" Width="429"/>
             </ScrollViewer>
         </StackPanel>
         <Button Click="Button_Click" Margin="0,430,0,10" Grid.Row="1" >
