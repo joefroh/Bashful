@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bashful
 {
-    class Quote
+    public class Quote
     {
         public Quote(string quote, string number, string url, string upgradeLink, string downgradeLink, string reportLink)
         {

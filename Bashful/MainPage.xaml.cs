@@ -35,7 +35,7 @@ namespace Bashful
         {
             LoadingBar.Visibility = Visibility.Visible;
             var quote = await grabber.GetRandomQuotes();
-            data.CurrentQuote = quote.Value;
+            data.CurrentQuote = HttpUtility.HtmlDecode(quote.Value.QuoteText);
             data.Number = quote.Key;
             LoadingBar.Visibility = Visibility.Collapsed;
         }

@@ -30,9 +30,9 @@ namespace Bashful
             currentQuote = -1;
         }
 
-        public async Task<KeyValuePair<string, string>> GetRandomQuotes()
+        public async Task<KeyValuePair<string, Quote>> GetRandomQuotes()
         {
-            KeyValuePair<string, string> output = new KeyValuePair<string, string>();
+            KeyValuePair<string, Quote> output = new KeyValuePair<string, Quote>();
             if (needQuotes)
             {
                 currentQuote = 0;
@@ -53,7 +53,7 @@ namespace Bashful
 
                 if (_quotes.Any())
                 {
-                    output = new KeyValuePair<string, string>(HttpUtility.HtmlDecode(_quotes[currentQuote].Number), HttpUtility.HtmlDecode(_quotes[currentQuote].QuoteText));
+                    output = new KeyValuePair<string, Quote>(HttpUtility.HtmlDecode(_quotes[currentQuote].Number), _quotes[currentQuote]);
                 }
 
                 if (currentQuote + 1 < _quotes.Count)
@@ -68,7 +68,7 @@ namespace Bashful
             else
             {
                 currentQuote++;
-                output = new KeyValuePair<string, string>(HttpUtility.HtmlDecode(_quotes[currentQuote].Number), HttpUtility.HtmlDecode(_quotes[currentQuote].QuoteText));
+                output = new KeyValuePair<string, Quote>(HttpUtility.HtmlDecode(_quotes[currentQuote].Number), _quotes[currentQuote]);
 
                 if (currentQuote + 1 < _quotes.Count)
                 {
