@@ -40,6 +40,11 @@ namespace Bashful
             LoadingBar.Visibility = Visibility.Collapsed;
         }
 
+        private void UpgradeClick(object sender, EventArgs e)
+        {
+
+        }
+
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
         //{

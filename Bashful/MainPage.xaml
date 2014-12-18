@@ -70,7 +70,7 @@
 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar>
-            <shell:ApplicationBarIconButton IconUri="Assets\add.png" Text="upgrade" />
+            <shell:ApplicationBarIconButton IconUri="Assets\add.png" Text="upgrade" Click="UpgradeClick"/>
             <shell:ApplicationBarIconButton IconUri="Assets\minus.png" Text="downgrade" />
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="report quote" />
